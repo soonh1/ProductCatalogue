@@ -1,0 +1,53 @@
+﻿@page
+@model ProductCatalogue.Pages.Womens.IndexModel
+
+@{
+    ViewData["Title"] = "Women";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Women[0].Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Women[0].Type.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Women[0].Product.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Women[0].Product.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Women)
+        {
+            @if (item.Type.TypeID == 100)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Type.TypeID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Type.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product.Color)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product.Name)
+                    </td>
+                    <td>
+                        <a asp-page="/Products/Details" asp-route-id="@item.ProductID">Details</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
