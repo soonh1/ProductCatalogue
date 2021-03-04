@@ -2,14 +2,11 @@
 @model ProductCatalogue.Pages.Womens.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Women";
 }
 
 <h1>Index</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -20,13 +17,18 @@
                 @Html.DisplayNameFor(model => model.Women[0].Type.Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Women[0].Product)
+                @Html.DisplayNameFor(model => model.Women[0].Product.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Women[0].Product.Name)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model.Women) {
+    @if (item.Type.TypeID == 101)
+    {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Type.TypeID)
@@ -35,14 +37,16 @@
                 @Html.DisplayFor(modelItem => item.Type.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Product.ID)
+                @Html.DisplayFor(modelItem => item.Product.Color)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.WomenID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.WomenID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.WomenID">Delete</a>
+                @Html.DisplayFor(modelItem => item.Product.Name)
+            </td>
+            <td>
+                <a asp-page="/Products/Details" asp-route-id="@item.ProductID">Details</a>
             </td>
         </tr>
+     }
 }
     </tbody>
 </table>
