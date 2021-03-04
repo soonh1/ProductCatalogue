@@ -23,7 +23,7 @@ namespace ProductCatalogue.Data
 
             var products = new Product[]
             {
-                
+                //Women
                 new Product{Name="Kjole med pufærmer", Color="Grøn/Småblomstret", Descriptions="Midi-kjole i vævet kvalitet af LivaEco™-viskose med trykt mønster. Kjolen har dyb V-udskæring og beklædte knapper foran. Asymmetrisk skæring under brystet og lange pufærmer med smal elastik forneden. Uden for.", Price=249, Size=10, Image="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fb0%2Fe3%2Fb0e36182d5404dffa33de2b6f734dba108ffde25.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"},
                 new Product{Name="Ribstrikket top", Color="Beige", Descriptions="Tætsiddende top i ribstrikket kvalitet med firkantet udskæring foran og lange ærmer.", Price=179, Size=20, Image="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fbb%2F0f%2Fbb0f196a9a14402f966fb2a5bed303f8fd529bce.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"},
                 new Product{Name="Vide bukser", Color="Sort", Descriptions="Bukser i vævet kvalitet af genvundet polyester. Bukserne har høj talje og lige, vide ben med pressefolder. Gylp med lynlås og skjult hægte og malle.", Price=299, Size=30, Image="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F4a%2Fcf%2F4acf95ad45d864ebe5a0f4a69802ddc881be23b5.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bladies_trousers_highwaisted%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"},
@@ -31,6 +31,12 @@ namespace ProductCatalogue.Data
                 new Product{Name="Slip-ins", Color="Beige", Descriptions="Slip-ins i imiteret læder med beklædt hæl. Har bred rem over foden og firkantet tå. For i jersey af genvundet polyester og indersål i imiteret læder. Hælhøjde 8 cm.", Price=249, Size=30, Image="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fc8%2F2c%2Fc82ce245fb2e480a7796e75fbb2416480de5d3a0.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"},
                 new Product{Name="Sweatshirtkjole", Color="Lysegråmeleret", Descriptions="Kort kjole i let sweatshirtkvalitet i bomuldsblanding. Kjolen har lav skuldersøm og lange ærmer. Er skåret forneden med rynkning og vid underdel. Ribkant i halsen og forneden på ærmerne.", Price=129, Size=30, Image="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F95%2Fbc%2F95bc1e0463e328517a4edb3383b460507e9098bb.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]"},
                 new Product{Name="Let kjole", Color="Pudderrosa", Descriptions="Kort kjole i luftig, vævet kvalitet af viskose- og bomuldsblanding med krave og V-formet åbning foran. Kjolen har meget lav skuldersøm og lange ballonærmer med manchet og knaplukning.", Price=179, Size=30, Image="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F34%2Fd7%2F34d7023d21dc22c8542d3f9afa7ae9b9485ef681.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bladies_dresses_shortdresses%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"}
+
+                //Men
+
+
+                //Kids
+
             };
 
             context.Products.AddRange(products);
