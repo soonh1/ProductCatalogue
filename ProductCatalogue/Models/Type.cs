@@ -15,5 +15,7 @@ namespace ProductCatalogue.Models
         public ICollection<Women> Womens { get; set; }
 
         public ICollection<Men> Mens { get; set; }
+
+        public ICollection<Kid> Kids { get; set; }
     }
 }

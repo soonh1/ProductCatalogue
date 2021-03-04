@@ -17,6 +17,8 @@ namespace ProductCatalogue.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<Women> Womens { get; set; }
         public DbSet<Men> Mens { get; set; }
+
+        public DbSet<Kid> Kids { get; set; }
         public DbSet<Type> Types { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -24,6 +26,7 @@ namespace ProductCatalogue.Data
             modelBuilder.Entity<Product>().ToTable("Product");
             modelBuilder.Entity<Women>().ToTable("Women");
             modelBuilder.Entity<Men>().ToTable("Men");
+            modelBuilder.Entity<Kid>().ToTable("Kid");
             modelBuilder.Entity<Type>().ToTable("Type");
         }
 

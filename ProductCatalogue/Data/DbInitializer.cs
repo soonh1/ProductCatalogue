@@ -28,7 +28,9 @@ namespace ProductCatalogue.Data
                 new Product{Name="Meredith", Color="Blue", Descriptions="I have an idea what im doing", Price=29, Size=20},
                 new Product{Name="Arturo", Color="Yellow", Descriptions="??", Price=19, Size=30},
                 new Product{Name="test", Color="Yellow", Descriptions="test", Price=19, Size=30},
-                new Product{Name="test2", Color="Yellow2", Descriptions="test2", Price=19, Size=30}
+                new Product{Name="test2", Color="Yellow2", Descriptions="test2", Price=19, Size=30},
+                new Product{Name="test6", Color="Yellow", Descriptions="test", Price=19, Size=30},
+                new Product{Name="test7", Color="Yellow2", Descriptions="test2", Price=19, Size=30}
             };
 
             context.Products.AddRange(products);
@@ -37,7 +39,8 @@ namespace ProductCatalogue.Data
             var types = new Type[]
             {
                 new Type{ TypeID=100, Title="pants"},
-                new Type{ TypeID=101, Title="top"}
+                new Type{ TypeID=101, Title="top"},
+                new Type{ TypeID=102, Title="tshirt"}
             };
 
             context.Types.AddRange(types);
@@ -59,7 +62,18 @@ namespace ProductCatalogue.Data
                 new Men{ ProductID=4, TypeID=100}
             };
 
+
             context.Mens.AddRange(mens);
+            context.SaveChanges();
+
+            var kids = new Kid[]
+{
+                new Kid{ ProductID=6, TypeID=102},
+                new Kid{ ProductID=7, TypeID=102}
+};
+
+
+            context.Kids.AddRange(kids);
             context.SaveChanges();
         }
     }
