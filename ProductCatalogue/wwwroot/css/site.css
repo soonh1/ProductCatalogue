@@ -73,36 +73,36 @@ body {
 /* Women pages
 -------------------------------------------------- */
 
-.women-index-container {
+.women-container {
     display: grid;
     grid-template-columns: 200px auto;
     margin: 20px;
 }
 
-.women-index-nav ul {
+.women-nav ul {
     list-style-type: none;
     padding: 0;
 }
 
-.women-index-nav ul li a{
+.women-nav ul li a{
     padding: 10px 0 0 0;
 }
 
-.women-index-main {
+.women-main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     /* this is the same as grid-template-rows: 300px 300px; */
     grid-gap: 20px;
     margin: 0 200px;
 }
-.women-index-main div img {
+.women-main div img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 200px;
     height: 200px;
 }
-.women-index-main div p {
+.women-main div p {
     text-align: center;
     font-size: larger;
     font-weight: bold;

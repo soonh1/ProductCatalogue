@@ -1,8 +1,8 @@
 ﻿@page
-@model ProductCatalogue.Pages.Womens.PantsModel
+@model ProductCatalogue.Pages.Womens.DressesModel
 
 @{
-    ViewData["Title"] = "Pants";
+    ViewData["Title"] = "Dresses";
 }
 
 <section class="women-container">
@@ -40,7 +40,7 @@
     <main class="women-main">
         @foreach (var item in Model.Women)
         {
-            @if (item.Type.TypeID == 106)
+            @if (item.Type.TypeID == 100)
             {
                 <div>
                     <a class="text-dark" asp-page="/Products/Details" asp-route-id="@item.ProductID">
@@ -52,5 +52,3 @@
         }
     </main>
 </section>
-
-

@@ -9,11 +9,11 @@ using ProductCatalogue.Models;
 
 namespace ProductCatalogue.Pages.Womens
 {
-    public class PantsModel : PageModel
+    public class DressesModel : PageModel
     {
         private readonly ProductCatalogue.Data.ShopContext _context;
 
-        public PantsModel(ProductCatalogue.Data.ShopContext context)
+        public DressesModel(ProductCatalogue.Data.ShopContext context)
         {
             _context = context;
         }
