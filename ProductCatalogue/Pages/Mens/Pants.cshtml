@@ -1,0 +1,49 @@
+﻿@page
+@model ProductCatalogue.Pages.Mens.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Men[0].Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Men[0].Type.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Men[0].Product)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Men)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type.TypeID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.ID)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.MenID">Edit</a> |
+                    <a asp-page="/Products/Details" asp-route-id="@item.ProductID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.MenID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
