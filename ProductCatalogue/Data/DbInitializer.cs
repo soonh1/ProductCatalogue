@@ -33,15 +33,6 @@ namespace ProductCatalogue.Data
             context.Products.AddRange(products);
             context.SaveChanges();
 
-            var genders = new Gender[]
-            {
-                new Gender{ ProductID=1, TypeID=100, Grade=Grade.A},
-                new Gender{ ProductID=2, TypeID=101, Grade=Grade.A}
-            };
-
-            context.Genders.AddRange(genders);
-            context.SaveChanges();
-
             var types = new Type[]
             {
                 new Type{ TypeID=100, Title="pants"},
@@ -49,6 +40,15 @@ namespace ProductCatalogue.Data
             };
 
             context.Types.AddRange(types);
+            context.SaveChanges();
+
+            var genders = new Gender[]
+            {
+                new Gender{ ProductID=1, TypeID=100, Grade=Grade.A},
+                new Gender{ ProductID=2, TypeID=101, Grade=Grade.A}
+            };
+
+            context.Genders.AddRange(genders);
             context.SaveChanges();
         }
     }
