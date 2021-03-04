@@ -13,7 +13,7 @@ namespace ProductCatalogue.Models
         public int Size { get; set; }
         public string Color { get; set; }
         public int Price { get; set; }
-        public byte[] Image { get; set; }
+        public string Image { get; set; }
 
         //public string Gender { get; set; }
         //public string Type { get; set; }

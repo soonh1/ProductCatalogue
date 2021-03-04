@@ -17,12 +17,6 @@
                 @Html.DisplayNameFor(model => model.Product[0].Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Product[0].Descriptions)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product[0].Size)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Product[0].Color)
             </th>
             <th>
@@ -41,24 +35,18 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Descriptions)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Size)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Color)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Image)
+                <img src="@Url.Content(item.Image)" style="height:50px; width:50px;"/>
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                @*<a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |*@
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> 
+                @*<a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>*@
             </td>
         </tr>
 }
