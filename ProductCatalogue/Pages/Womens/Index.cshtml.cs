@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using ProductCatalogue.Data;
 using ProductCatalogue.Models;
 
-namespace ProductCatalogue.Pages.Mens
+namespace ProductCatalogue.Pages.Womens
 {
     public class IndexModel : PageModel
     {
@@ -19,13 +19,13 @@ namespace ProductCatalogue.Pages.Mens
             _context = context;
         }
 
-        public IList<Men> Men { get;set; }
+        public IList<Women> Women { get;set; }
 
         public async Task OnGetAsync()
         {
-            Men = await _context.Mens
-                .Include(m => m.Product)
-                .Include(m => m.Type).ToListAsync();
+            Women = await _context.Womens
+                .Include(w => w.Product)
+                .Include(w => w.Type).ToListAsync();
         }
     }
 }

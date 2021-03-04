@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using ProductCatalogue.Data;
 using ProductCatalogue.Models;
 
-namespace ProductCatalogue.Pages.Mens
+namespace ProductCatalogue.Pages.Womens
 {
     public class EditModel : PageModel
     {
@@ -21,7 +21,7 @@ namespace ProductCatalogue.Pages.Mens
         }
 
         [BindProperty]
-        public Men Men { get; set; }
+        public Women Women { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,11 +30,11 @@ namespace ProductCatalogue.Pages.Mens
                 return NotFound();
             }
 
-            Men = await _context.Mens
-                .Include(m => m.Product)
-                .Include(m => m.Type).FirstOrDefaultAsync(m => m.MenID == id);
+            Women = await _context.Womens
+                .Include(w => w.Product)
+                .Include(w => w.Type).FirstOrDefaultAsync(m => m.WomenID == id);
 
-            if (Men == null)
+            if (Women == null)
             {
                 return NotFound();
             }
@@ -52,7 +52,7 @@ namespace ProductCatalogue.Pages.Mens
                 return Page();
             }
 
-            _context.Attach(Men).State = EntityState.Modified;
+            _context.Attach(Women).State = EntityState.Modified;
 
             try
             {
@@ -60,7 +60,7 @@ namespace ProductCatalogue.Pages.Mens
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!MenExists(Men.MenID))
+                if (!WomenExists(Women.WomenID))
                 {
                     return NotFound();
                 }
@@ -73,9 +73,9 @@ namespace ProductCatalogue.Pages.Mens
             return RedirectToPage("./Index");
         }
 
-        private bool MenExists(int id)
+        private bool WomenExists(int id)
         {
-            return _context.Mens.Any(e => e.MenID == id);
+            return _context.Womens.Any(e => e.WomenID == id);
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿@page
-@model ProductCatalogue.Pages.Mens.IndexModel
+@model ProductCatalogue.Pages.Womens.IndexModel
 
 @{
     ViewData["Title"] = "Index";
@@ -14,19 +14,19 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Men[0].Type)
+                @Html.DisplayNameFor(model => model.Women[0].Type)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Men[0].Type.Title)
+                @Html.DisplayNameFor(model => model.Women[0].Type.Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Men[0].Product)
+                @Html.DisplayNameFor(model => model.Women[0].Product)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Men) {
+@foreach (var item in Model.Women) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Type.TypeID)
@@ -38,9 +38,9 @@
                 @Html.DisplayFor(modelItem => item.Product.ID)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.MenID">Edit</a> |
-                <a asp-page="/Products/Details" asp-route-id="@item.ProductID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.MenID">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.WomenID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.WomenID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.WomenID">Delete</a>
             </td>
         </tr>
 }

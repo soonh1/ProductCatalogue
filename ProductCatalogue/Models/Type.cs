@@ -12,6 +12,8 @@ namespace ProductCatalogue.Models
         public int TypeID { get; set; }
         public string Title { get; set; }
 
-        public ICollection<Gender> Genders { get; set; }
+        public ICollection<Women> Womens { get; set; }
+
+        public ICollection<Men> Mens { get; set; }
     }
 }

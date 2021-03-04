@@ -15,13 +15,15 @@ namespace ProductCatalogue.Data
         {
         }
         public DbSet<Product> Products { get; set; }
-        public DbSet<Gender> Genders { get; set; }
+        public DbSet<Women> Womens { get; set; }
+        public DbSet<Men> Mens { get; set; }
         public DbSet<Type> Types { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Product>().ToTable("Product");
-            modelBuilder.Entity<Gender>().ToTable("Gender");
+            modelBuilder.Entity<Women>().ToTable("Women");
+            modelBuilder.Entity<Men>().ToTable("Men");
             modelBuilder.Entity<Type>().ToTable("Type");
         }
 

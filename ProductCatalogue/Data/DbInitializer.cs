@@ -42,13 +42,22 @@ namespace ProductCatalogue.Data
             context.Types.AddRange(types);
             context.SaveChanges();
 
-            var genders = new Gender[]
+            var womens = new Women[]
             {
-                new Gender{ ProductID=1, TypeID=100, Grade=Grade.A},
-                new Gender{ ProductID=2, TypeID=101, Grade=Grade.A}
+                new Women{ ProductID=1, TypeID=100},
+                new Women{ ProductID=2, TypeID=101}
             };
 
-            context.Genders.AddRange(genders);
+            context.Womens.AddRange(womens);
+            context.SaveChanges();
+
+            var mens = new Men[]
+            {
+                new Men{ ProductID=3, TypeID=100},
+                new Men{ ProductID=4, TypeID=100}
+            };
+
+            context.Mens.AddRange(mens);
             context.SaveChanges();
         }
     }

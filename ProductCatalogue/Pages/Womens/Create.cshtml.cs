@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using ProductCatalogue.Data;
 using ProductCatalogue.Models;
 
-namespace ProductCatalogue.Pages.Mens
+namespace ProductCatalogue.Pages.Womens
 {
     public class CreateModel : PageModel
     {
@@ -27,7 +27,7 @@ namespace ProductCatalogue.Pages.Mens
         }
 
         [BindProperty]
-        public Men Men { get; set; }
+        public Women Women { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
@@ -37,7 +37,7 @@ namespace ProductCatalogue.Pages.Mens
                 return Page();
             }
 
-            _context.Mens.Add(Men);
+            _context.Womens.Add(Women);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
