@@ -1,0 +1,55 @@
+﻿@page
+@model ProductCatalogue.Pages.Womens.ShoeModel
+
+@{
+    ViewData["Title"] = "Shoe";
+}
+
+<section class="women-container">
+    <nav class="women-nav">
+        <h3>
+            <a class="text-dark" asp-area="" asp-page="/Womens/Index">Damer</a>
+        </h3>
+        <ul>
+            <li>
+                <a class="nav-link text-dark" asp-area="" asp-page="/Womens/Dresses">Dresses</a>
+            </li>
+            <li>
+                <a class="nav-link text-dark" asp-area="" asp-page="/Womens/Top">Top</a>
+            </li>
+            <li>
+                <a class="nav-link text-dark" asp-area="" asp-page="/Womens/Short">Short</a>
+            </li>
+            <li>
+                <a class="nav-link text-dark" asp-area="" asp-page="/Womens/Blouses">Blouses</a>
+            </li>
+            <li>
+                <a class="nav-link text-dark" asp-area="" asp-page="/Womens/Blazers">Blazers</a>
+            </li>
+            <li>
+                <a class="nav-link text-dark" asp-area="" asp-page="/Womens/Knitted-Sweater">Knitted Sweater</a>
+            </li>
+            <li>
+                <a class="nav-link text-dark" asp-area="" asp-page="/Womens/Pants">Pants</a>
+            </li>
+            <li>
+                <a class="nav-link text-dark" asp-area="" asp-page="/Womens/Shoe">Shoe</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="women-main">
+        @foreach (var item in Model.Women)
+        {
+            @if (item.Type.TypeID == 107)
+            {
+                <div>
+                    <a class="text-dark" asp-page="/Products/Details" asp-route-id="@item.ProductID">
+                        <img src="@Url.Content(item.Product.Image)" />
+                        <p>@Html.DisplayFor(modelItem => item.Product.Name)</p>
+                    </a>
+                </div>
+            }
+        }
+    </main>
+</section>
+
