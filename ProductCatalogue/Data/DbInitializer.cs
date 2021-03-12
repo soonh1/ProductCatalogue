@@ -30,12 +30,13 @@ namespace ProductCatalogue.Data
                 new Product{Name="Stylede bukser i lyocellmix", Color="Creme", Descriptions="Bukser i vævet kvalitet af lyocell- og viskoseblanding. Har høj talje med beklædt elastik og lige, vide ben med pressefolder. Skrå sidelommer.", Price=199, Size=30, Image="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F31%2Fd2%2F31d2a5ffbe6b8c3aafa94f35dd66758f354c702f.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]"},
                 new Product{Name="Slip-ins", Color="Beige", Descriptions="Slip-ins i imiteret læder med beklædt hæl. Har bred rem over foden og firkantet tå. For i jersey af genvundet polyester og indersål i imiteret læder. Hælhøjde 8 cm.", Price=249, Size=30, Image="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fc8%2F2c%2Fc82ce245fb2e480a7796e75fbb2416480de5d3a0.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"},
                 new Product{Name="Sweatshirtkjole", Color="Lysegråmeleret", Descriptions="Kort kjole i let sweatshirtkvalitet i bomuldsblanding. Kjolen har lav skuldersøm og lange ærmer. Er skåret forneden med rynkning og vid underdel. Ribkant i halsen og forneden på ærmerne.", Price=129, Size=30, Image="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F95%2Fbc%2F95bc1e0463e328517a4edb3383b460507e9098bb.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]"},
-                new Product{Name="Let kjole", Color="Pudderrosa", Descriptions="Kort kjole i luftig, vævet kvalitet af viskose- og bomuldsblanding med krave og V-formet åbning foran. Kjolen har meget lav skuldersøm og lange ballonærmer med manchet og knaplukning.", Price=179, Size=30, Image="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F34%2Fd7%2F34d7023d21dc22c8542d3f9afa7ae9b9485ef681.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bladies_dresses_shortdresses%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"}
+                new Product{Name="Let kjole", Color="Pudderrosa", Descriptions="Kort kjole i luftig, vævet kvalitet af viskose- og bomuldsblanding med krave og V-formet åbning foran. Kjolen har meget lav skuldersøm og lange ballonærmer med manchet og knaplukning.", Price=179, Size=30, Image="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F34%2Fd7%2F34d7023d21dc22c8542d3f9afa7ae9b9485ef681.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bladies_dresses_shortdresses%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"},
 
                 //Men
-
+                new Product{ Name="Pants", Color="Gul", Price=2, Descriptions="hello", Size=32},
 
                 //Kids
+                new Product{ Name="Pants", Color="black", Price=2, Descriptions="Yello Kids", Size=32}
 
             };
 
@@ -65,7 +66,7 @@ namespace ProductCatalogue.Data
                 new Women{ ProductID=4, TypeID=106},
                 new Women{ ProductID=5, TypeID=107},
                 new Women{ ProductID=6, TypeID=100},
-                new Women{ ProductID=7, TypeID=100}
+                new Women{ ProductID=7, TypeID=100},
             };
 
             context.Womens.AddRange(womens);
@@ -73,20 +74,16 @@ namespace ProductCatalogue.Data
 
             var mens = new Men[]
             {
-                new Men{ ProductID=8, TypeID=107},
-                new Men{ ProductID=9, TypeID=107}
+                new Men{ ProductID=8, TypeID=106},
             };
-
 
             context.Mens.AddRange(mens);
             context.SaveChanges();
 
             var kids = new Kid[]
-{
-                new Kid{ ProductID=11, TypeID=102},
-                new Kid{ ProductID=12, TypeID=102}
-};
-
+            {
+                new Kid{ ProductID=9, TypeID=102},
+            };
 
             context.Kids.AddRange(kids);
             context.SaveChanges();
